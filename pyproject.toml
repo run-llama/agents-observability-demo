@@ -5,20 +5,21 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "llama-index-llms-ollama>=0.6.2",
-    "llama-index-observability-otel>=0.1.1",
-    "mypy>=1.16.1",
-    "opentelemetry-exporter-otlp-proto-http>=1.34.1",
-    "pandas>=2.3.0",
-    "psycopg-binary>=3.2.9",
-    "pytest>=8.4.1",
-    "sqlalchemy>=2.0.41",
+  "llama-index-llms-ollama>=0.6.2",
+  "llama-index-observability-otel>=0.1.1",
+  "mypy>=1.16.1",
+  "opentelemetry-exporter-otlp-proto-http>=1.34.1",
+  "pandas>=2.3.0",
+  "pre-commit>=4.2.0",
+  "psycopg-binary>=3.2.9",
+  "psycopg2-binary>=2.9.10",
+  "pytest>=8.4.1",
+  "python-dotenv>=1.1.0",
+  "sqlalchemy>=2.0.41"
 ]
-
-[tool.pytest.ini_options]
-pythonpath = ["src"]
 
 [tool.mypy]
 disable_error_code = ["import-not-found", "import-untyped"]
 
-
+[tool.pytest.ini_options]
+pythonpath = ["src"]
