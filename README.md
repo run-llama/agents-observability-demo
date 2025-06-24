@@ -1,6 +1,6 @@
-# Agentic Observability Demo
+# Agents Observability Demo
 
-## Your Accurate Flight Assistant
+## With LlamaIndex and OpenTelemetry!
 
 This demo showcases a solution for agent observability and tracing by building on the LlamaIndex x OpenTelemetry integration.
 
@@ -13,7 +13,7 @@ It traces the activity of an agent capable of extracting information from a Univ
 Get the GitHub repository:
 
 ```bash
-git clone https://github.com/AstraBert/agents-observability-demo
+git clone https://github.com/run-llama/agents-observability-demo
 ```
 
 Install dependencies:
