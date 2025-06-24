@@ -3,7 +3,7 @@ import pytest
 import pandas as pd
 import os
 
-from src.agents_observability.utils import OtelTracesSqlEngine
+from src.agents_observability_demo.utils import OtelTracesSqlEngine
 from sqlalchemy import text
 from dotenv import load_dotenv
 
@@ -74,3 +74,11 @@ def test_engine(otel_data: pd.DataFrame) -> None:
     assert res2_sorted[0].avg_duration == 225.0
     assert res2_sorted[1].service_name == "service-b"
     assert res2_sorted[1].avg_duration == 500.0
+    assert isinstance(sql_engine.to_pandas(), pd.DataFrame)
+    res3 = sql_engine.execute(
+        text(
+            "SELECT service_name, AVG(duration) AS avg_duration FROM test GROUP BY service_name;"
+        ),
+        return_pandas=True,
+    )
+    assert isinstance(res3, pd.DataFrame)
